@@ -30,7 +30,7 @@ jobs:
 
       - name: NPM install
         working-directory: cdk
-        run: npm install npm@latest -g
+        run: npm install npm@10.8.2 -g
 
       - name: Deploy CDK bootstrap stack
         working-directory: cdk
