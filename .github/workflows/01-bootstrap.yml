@@ -28,20 +28,6 @@ jobs:
           java-version: 17
           cache: 'maven'
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '23.1.0'
- 
-      - name: Install npm@23.1.0
-        run: npm install -g npm@23.1.0
-
-      - name: uninstall aws-cdk
-        run: npm uninstall -g aws-cdk
-
-      - name: Install AWS CDK CLI
-        run: npm install -g aws-cdk@latest
-
       - name: NPM install
         working-directory: cdk
         run: npm install 
