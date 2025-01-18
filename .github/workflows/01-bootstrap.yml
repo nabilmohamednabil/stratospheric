@@ -37,7 +37,7 @@ jobs:
         run: npm install -g npm@10.8.2
 
       - name: uninstall aws-cdk
-        run: npm install -g 
+        run: npm uninstall -g aws-cdk
 
       - name: Install AWS CDK CLI
         run: npm install -g aws-cdk@latest
