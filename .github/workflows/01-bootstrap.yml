@@ -32,6 +32,12 @@ jobs:
         working-directory: cdk
         run: npm install 
 
+      - name : npm uninstall -g aws-cdk
+        run: npm uninstall -g aws-cdk
+        
+      - name : npm install -g aws-cdk@2.51.0
+        run: npm install -g aws-cdk@2.51.0
+
       - name: Deploy CDK bootstrap stack
         working-directory: cdk
         run: npm run bootstrap
