@@ -28,9 +28,17 @@ jobs:
           java-version: 17
           cache: 'maven'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.20.5'
+ 
+      - name: Install npm@10.8.2
+        run: npm install -g npm@10.8.2
+
       - name: NPM install
         working-directory: cdk
-        run: npm install npm@10.8.2 -g
+        run: npm install 
 
       - name: Deploy CDK bootstrap stack
         working-directory: cdk
